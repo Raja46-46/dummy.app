@@ -1,25 +1,21 @@
+version: '3'
 services:
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
+    build: ./frontend
     ports:
-      - "80:80"
-    depends_on:
-      - backend
+      - "8081:80"
 
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    build: ./backend
     ports:
       - "5000:5000"
     depends_on:
       - db
 
   db:
-    build:
-      context: ./db
-      dockerfile: Dockerfile
+    build: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dummydb
     ports:
       - "3306:3306"
