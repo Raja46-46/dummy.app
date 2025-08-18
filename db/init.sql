@@ -1,2 +1,2 @@
-CREATE TABLE test (id INT PRIMARY KEY, name VARCHAR(50));
-INSERT INTO test (id, name) VALUES (1, 'Dummy Data');
+CREATE TABLE test (id INT AUTO_INCREMENT PRIMARY KEY, message VARCHAR(255));
+INSERT INTO test (message) VALUES ('Hello from Database ');
