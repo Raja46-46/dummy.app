@@ -1,2 +1,7 @@
-CREATE TABLE test (id INT AUTO_INCREMENT PRIMARY KEY, message VARCHAR(255));
-INSERT INTO test (message) VALUES ('Hello from Database ');
+CREATE DATABASE IF NOT EXISTS dummydb;
+USE dummydb;
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50)
+);
+INSERT INTO users (name) VALUES ('Raja'), ('Test User');
