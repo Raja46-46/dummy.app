@@ -3,7 +3,7 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "8081:80"
+      - "8084:80"
     depends_on:
       - backend
 
@@ -60,7 +60,7 @@ services:
     image: sonatype/nexus3:latest
     restart: unless-stopped
     ports:
-      - "8083:8083"   # Nexus UI
+      - "8081:8081"   # Nexus UI
       - "8082:8082"   # Docker Registry
     volumes:
       - nexus-data:/nexus-data
