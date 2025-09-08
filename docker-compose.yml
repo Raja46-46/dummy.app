@@ -54,18 +54,18 @@ volumes:
   sonarqube-data:
   sonarqube-logs:
 
-  version: '3.8'
+version: '3.8'
 services:
   nexus:
     image: sonatype/nexus3:latest
     restart: unless-stopped
     ports:
-      - "8081:8081"   # Nexus UI
-      - "8082:8082"   # Docker Registry
+      - "8082:8081"   # Map container 8081 → host 8082
     volumes:
       - nexus-data:/nexus-data
 
 volumes:
   nexus-data:
+
 
 
