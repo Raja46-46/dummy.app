@@ -21,7 +21,7 @@ services:
       MYSQL_DATABASE: dummydb
     ports:
       - "3306:3306"
-
+      
 version: '3.8'
 services:
   db:
@@ -53,3 +53,4 @@ volumes:
   sonar-db:
   sonarqube-data:
   sonarqube-logs:
+
